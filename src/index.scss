@@ -1,0 +1,68 @@
+@use './mixin/media';
+@use './mixin/var';
+
+$small: var.$small;
+$middle: var.$middle;
+$big: var.$big;
+$max: var.$max;
+
+$sm: var.$sm;
+$md: var.$md;
+.main{
+  margin: 0 10px;
+
+  @include media.mediaminmax($small,$middle){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include media.mediamin($middle){
+    padding-left: 30px;
+    padding-right: 30px;
+
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-form {
+    input,textarea{
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top : 10px;
+      margin-bottom : 30px;
+      padding : 18px;
+      font-size : 18px;
+      border : 1px solid #dee7ec;
+    }
+    textarea{
+      height: 150px;
+    }
+    .submit{
+      background-color : #dee7ec;
+      color : #889eab;
+      transition: .3s ease;
+      &:hover{
+        background-color : #b7d4e4;
+        color: rgb(136, 86, 223);
+        cursor: pointer;
+      }
+    }
+
+    @include media.mediamin($middle){
+      input,textarea,select {
+        width : 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include media.mediamin($max){
+        p{
+          width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,13 +1,58 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.main {
+  margin: 0 10px;
+}
+@media only screen and (min-width: 460px) and (max-width: 732px) {
+  .main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media only screen and (min-width: 732px) {
+  .main {
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.main .contact-form input, .main .contact-form textarea {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 18px;
+  font-size: 18px;
+  border: 1px solid #dee7ec;
+}
+.main .contact-form textarea {
+  height: 150px;
+}
+.main .contact-form .submit {
+  background-color: #dee7ec;
+  color: #889eab;
+  transition: 0.3s ease;
+}
+.main .contact-form .submit:hover {
+  background-color: #b7d4e4;
+  color: #8856df;
+  cursor: pointer;
+}
+@media only screen and (min-width: 732px) {
+  .main .contact-form input, .main .contact-form textarea, .main .contact-form select {
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 732px) and (min-width: 1018px) {
+  .main .contact-form p {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/*# sourceMappingURL=index.css.map */
